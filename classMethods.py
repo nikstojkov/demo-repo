@@ -21,12 +21,14 @@ class Employee:
 #class Developer(Employee)
  #   pass
 
+# Adding new line of code to see if it works
     @classmethod
     def set_raise_amt(cls, amount):
         cls.raise_amt = amount
 
 
 emp_1 = Employee('Nik', 'Stojkov', 20000)
+print("SOme test")
 emp_2 = Employee('Anna', 'Hollebon', 30000)
 
 print(emp_1.CreateEmail())
