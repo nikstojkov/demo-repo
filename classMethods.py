@@ -6,6 +6,8 @@ class Employee:
         self.first = first.capitalize()
         self.last = last.capitalize()
         self.pay = pay
+        
+    # added additional formtting to first and last name
 
         Employee.num_of_emps += 1
 
@@ -14,6 +16,7 @@ class Employee:
 
     def createEmail(self):
         return '{}'.format(self.first.lower() + '.' + self.last.lower() + '@home.com')
+    # added additional formatting to email gen
 
     # class function/method
     def apply_raise(self):
@@ -28,7 +31,7 @@ class Employee:
         cls.raise_amt = amount
 
 
-emp_1 = Employee('nIK', 'Stojkov', 20000)
+emp_1 = Employee('nIK', 'Stojkov', 20000) # testing formtting with incorrectly inserted data
 emp_2 = Employee('Anna', 'Hollebon', 30000)
 
 print(emp_1.createEmail())
