@@ -1,34 +1,35 @@
 class Employee:
-
     num_of_emps = 0
     raise_amount = 1.04
 
     def __init__(self, first, last, pay):
-        self.first=first
-        self.last=last
-        self.pay=pay
+        self.first = first.capitalize()
+        self.last = last.capitalize()
+        self.pay = pay
 
         Employee.num_of_emps += 1
 
-    def FullName(self):
+    def fullName(self):
         return '{} {}'.format(self.first, self.last)
-    def CreateEmail(self):
-        return '{}'.format(self.first + '.' + self.last + '@home.com')
-   #class function/method
+
+    def createEmail(self):
+        return '{}'.format(self.first.lower() + '.' + self.last.lower() + '@home.com')
+
+    # class function/method
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
 
-#class Developer(Employee)
- #   pass
+    # class Developer(Employee)
+    #   pass
 
-# Adding new line of code to see if it works
+    # Adding new line of code to see if it works
     @classmethod
     def set_raise_amt(cls, amount):
         cls.raise_amt = amount
 
 
-emp_1 = Employee('Nik', 'Stojkov', 20000)
-print("SOme test")
+emp_1 = Employee('nIK', 'Stojkov', 20000)
 emp_2 = Employee('Anna', 'Hollebon', 30000)
 
-print(emp_1.CreateEmail())
+print(emp_1.createEmail())
+print(emp_1.fullName())
